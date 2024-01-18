@@ -106,7 +106,6 @@ const Active = css`
 export const StyledItem = styled.li`
   ${({
     isActive,
-    isCollapsed,
     theme: {
       yoga: {
         components: {
@@ -125,8 +124,6 @@ export const StyledItem = styled.li`
     svg {
       height: ${icon.height}px;
       width: ${icon.width}px;
-
-      ${isCollapsed && `flex-shrink: 0;`}
     }
 
     &:hover,
@@ -153,10 +150,6 @@ export const StyledItem = styled.li`
       }
 
       ${isActive && Active};
-
-      & > div {
-        ${props => props.isCollapsed && 'overflow: hidden;'}
-      }
     }
   `}
 `;
