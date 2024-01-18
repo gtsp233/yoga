@@ -35,7 +35,7 @@ const StyledNavigationMenu = styled(Box)`
     media.max('lg')`
           position: absolute;
           width: 100%;
-          height: calc(100% - 58px);
+          height: calc(100% - 56px);
           z-index: 10;
           top: 0;
           right: ${isOpenOnMobile ? '0' : '-100%'};
@@ -66,6 +66,7 @@ const StyledItems = styled.nav`
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  overflow-y: auto;
 `;
 
 const StyledItemsGroup = styled.ul`
